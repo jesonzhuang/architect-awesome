@@ -1,12 +1,16 @@
 
 <h1>《后端架构师技术图谱》</h1>
 
+![阿里巴巴集团长期内推，欢迎自荐，xingshaocheng@gmail.com](https://cdns.coderxing.com/HrUJ4G3E.png_700x700)
+
 [![知识共享协议（CC协议）](https://img.shields.io/badge/License-Creative%20Commons-DC3D24.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
 [![GitHub stars](https://img.shields.io/github/stars/xingshaocheng/architect-awesome.svg?style=flat&label=Star)](https://github.com/xingshaocheng/architect-awesome/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/xingshaocheng/architect-awesome.svg?style=flat&label=Fork)](https://github.com/xingshaocheng/architect-awesome/fork)
 [![GitHub watchers](https://img.shields.io/github/watchers/xingshaocheng/architect-awesome.svg?style=flat&label=Watch)](https://github.com/xingshaocheng/architect-awesome/watchers)
 
-**更新于20180513**
+**更新于20180624**
+
+
 * [数据结构](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#数据结构)
 	* [队列](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#队列)
 	* [集合](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#集合)
@@ -49,6 +53,7 @@
 	* [最小生成树算法](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#最小生成树算法)
 	* [最短路径算法](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#最短路径算法)
 * [并发](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#并发)
+	* [Java 并发](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#java-并发)
 	* [多线程](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#多线程)
 	* [线程安全](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#线程安全)
 	* [一致性、事务](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#一致性事务)
@@ -116,7 +121,8 @@
 * [中间件](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#中间件)
 	* [Web Server](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#web-server)
 		* [Nginx](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#nginx)
-		* [OpenResty](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#openresty)
+		* [OpenResty](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#openresty)  
+		* [Tengine](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#Tengine)  
 		* [Apache Httpd](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#apache-httpd)
 		* [Tomcat](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#tomcat)
 			* [架构原理](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#架构原理)
@@ -302,6 +308,7 @@
 	* [敏捷开发](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#敏捷开发)
 	* [极限编程（XP）](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#极限编程xp)
 	* [结对编程](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#结对编程)
+	* [PDCA 循环质量管理](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#pdca-循环质量管理)
 	* [FMEA管理模式](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#fmea管理模式)
 * [通用业务术语](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#通用业务术语)
 * [技术趋势](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#技术趋势)
@@ -685,7 +692,7 @@ KMP：Knuth-Morris-Pratt算法（简称KMP）
 
 ### 死锁
 * [《“死锁”四个必要条件的合理解释》](https://blog.csdn.net/yunfenglw/article/details/45950305)
-	* 互斥、持有、不可剥夺、不可剥夺。
+	* 互斥、持有、不可剥夺、环形等待。
 * [Java如何查看死锁？](https://blog.csdn.net/u014039577/article/details/52351626)
 	* JConsole 可以识别死锁。
 	
@@ -729,7 +736,7 @@ TODO
 ## 设计模式的六大原则
 * [《设计模式的六大原则》](https://blog.csdn.net/q291611265/article/details/48465113)
 	* 开闭原则：对扩展开放,对修改关闭，多使用抽象类和接口。
-	* 里氏代换原则：基类可以被子类替换，使用抽象类继承,不使用具体类继承。
+	* 里氏替换原则：基类可以被子类替换，使用抽象类继承,不使用具体类继承。
 	* 依赖倒转原则：要依赖于抽象,不要依赖于具体，针对接口编程,不针对实现编程。
 	* 接口隔离原则：使用多个隔离的接口,比使用单个接口好，建立最小的接口。
 	* 迪米特法则：一个软件实体应当尽可能少地与其他实体发生相互作用，通过中间类建立联系。
@@ -738,6 +745,7 @@ TODO
 ## 23种常见设计模式
 * [《设计模式》](http://www.runoob.com/design-pattern/design-pattern-tutorial.html)
 * [《23种设计模式全解析》](https://www.cnblogs.com/susanws/p/5510229.html)
+* [《设计模式类图与示例》](https://github.com/ToryZhou/design-pattern)
 
 ## 应用场景
 * [《细数JDK里的设计模式》](http://blog.jobbole.com/62314/)
@@ -789,7 +797,7 @@ TODO
 
 ## AOP
 
-* [《轻松理解AOP(面向切面编程)》](https://my.oschina.net/yanquan345/blog/203415)
+* [《轻松理解AOP(面向切面编程)》](https://blog.csdn.net/yanquan345/article/details/19760027)
 * [《Spring AOP详解》](https://www.cnblogs.com/hongwz/p/5764917.html)
 * [《Spring AOP的实现原理》](http://www.importnew.com/24305.html)
 	* Spring AOP使用的动态代理，主要有两种方式：JDK动态代理和CGLIB动态代理。
@@ -988,7 +996,11 @@ APM —  Application Performance Management
 ### OpenResty
 * [官方网站](http://openresty.org/cn/)
 * [《浅谈 OpenResty》](http://www.linkedkeeper.com/detail/blog.action?bid=1034)
-	* 通过 Lua 模块可以在Nginx上进行开发。 
+	* 通过 Lua 模块可以在Nginx上进行开发。   
+* [agentzh 的 Nginx 教程](https://openresty.org/download/agentzh-nginx-tutorials-zhcn.html)  
+	
+### Tengine
+* [官方网站](http://tengine.taobao.org/)  
 
 ### Apache Httpd
 * [官方网站](http://httpd.apache.org/)
@@ -1003,7 +1015,7 @@ APM —  Application Performance Management
 * [《四张图带你了解Tomcat系统架构》](https://blog.csdn.net/xlgen157387/article/details/79006434)
 
 * [《JBoss vs. Tomcat: Choosing A Java Application Server》](https://www.futurehosting.com/blog/jboss-vs-tomcat-choosing-a-java-application-server/)
-	* Tomcat 是轻量级的 Serverlet 容器，没有实现全部 JEE 特性（比如持久化和事务处理），但可以通过其他组件代替，比如Srping。
+	* Tomcat 是轻量级的 Serverlet 容器，没有实现全部 JEE 特性（比如持久化和事务处理），但可以通过其他组件代替，比如Spring。
 	* Jboss 实现全部了JEE特性，软件开源免费、文档收费。
 
 #### 调优方案
@@ -1183,6 +1195,8 @@ Java实现，推拉模式都是支持，吞吐量逊于Kafka。可以保证消�
 
 * [《Quartz任务调度的基本实现原理》](https://www.cnblogs.com/zhenyuyaodidiao/p/4755649.html)
 	* Quartz集群中，独立的Quartz节点并不与另一其的节点或是管理节点通信，而是通过相同的数据库表来感知到另一Quartz应用的 
+* [《Elastic-Job-Lite 源码解析》](http://www.iocoder.cn/categories/Elastic-Job-Lite/?vip&architect-awesome)
+* [《Elastic-Job-Cloud 源码解析》](http://www.iocoder.cn/categories/Elastic-Job-Cloud/?vip&architect-awesome)
 
 
 ## RPC
@@ -1248,6 +1262,7 @@ servlet 3.0 异步特性可用于配置中心的客户端
 * [《谈API网关的背景、架构以及落地方案》](http://www.infoq.com/cn/news/2016/07/API-background-architecture-floo)
 
 * [《使用Zuul构建API Gateway》](https://blog.csdn.net/zhanglh046/article/details/78651993)
+* [《Spring Cloud Gateway 源码解析》](http://www.iocoder.cn/categories/Spring-Cloud-Gateway/?vip&architect-awesome)
 * [《HTTP API网关选择之一Kong介绍》](https://mp.weixin.qq.com/s/LIq2CiXJQmmjBC0yvYLY5A)
 
 # 网络
@@ -1529,8 +1544,8 @@ MyISAM 是非聚集，InnoDB 是聚集
 
 
 * [《邪恶的JAVA HASH DOS攻击》](http://www.freebuf.com/articles/web/14199.html)
-	* 利用JsonObjet 上传大Json，JsonObject 底层使用HashMap；不同的数据产生相同的hash值，使得构建Hash速度变慢，耗尽CPU。
-* [《一种高级的DoS攻击-Hash碰撞攻击》](https://yq.aliyun.com/articles/92194?t=t1)
+	* 利用JsonObject 上传大Json，JsonObject 底层使用HashMap；不同的数据产生相同的hash值，使得构建Hash速度变慢，耗尽CPU。
+* [《一种高级的DoS攻击-Hash碰撞攻击》](http://blog.it2048.cn/article_hash-collision.html )
 * [《关于Hash Collision DoS漏洞：解析与解决方案》](http://www.iteye.com/news/23939/)
 
 ### 脚本注入
@@ -1811,7 +1826,7 @@ TODO
 * [《JVM安全退出（如何优雅的关闭java服务）》](https://blog.csdn.net/u011001084/article/details/73480432)
 推荐推出方式：System.exit，Kill SIGTERM；不推荐 kill-9；用 Runtime.addShutdownHook 注册钩子。
 * [《常见Java应用如何优雅关闭》](http://ju.outofmemory.cn/entry/337235)
-Java、Srping、Dubbo 优雅关闭方式。
+Java、Spring、Dubbo 优雅关闭方式。
 
 ## 数据库扩展
 
@@ -2054,7 +2069,7 @@ TODO
 
 ## 代码规范
 
-TODO
+* [《阿里巴巴Java开发手册》](https://github.com/alibaba/p3c)
 
 ## 代码 Review
 
@@ -2251,6 +2266,8 @@ TODO
 
 * [国家数据](http://data.stats.gov.cn/)
 
+* [TalkingData](http://www.talkingdata.com/)
+
 ## 专项网站
 
 * 测试:
@@ -2276,8 +2293,10 @@ TODO
 	* [中国大数据](http://www.thebigdata.cn/) 
 
 * 其他专题网站：
+	* [InfoQ](http://www.infoq.com/cn/)
+		* 偏重于基础架构、运维方向
 	* [DockerInfo](http://www.dockerinfo.net/)
-		* 专注于 Docker 应用及咨询、教程的网站。
+		* 专注于 Docker 应用及咨询、教程的网站
 	* [Linux公社](https://www.linuxidc.com/)
 		* Linux 主题社区
 
@@ -2306,28 +2325,28 @@ TODO
 
 #### 开发方面
 
-* 《阿里巴巴Java开发手册》[京东](https://union-click.jd.com/jdc?d=bVKwZQ) [淘宝](https://s.taobao.com/search?q=阿里巴巴Java开发手册)
+* 《阿里巴巴Java开发手册》[详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=BfL5CR)
 
 #### 架构方面
-* 《软件架构师的12项修炼：技术技能篇》[京东](https://union-click.jd.com/jdc?d=gXvRd8) [淘宝](https://s.taobao.com/search?q=软件架构师的12项修炼：技术技能篇)
-* 《架构之美》[京东](https://union-click.jd.com/jdc?d=xJit5I) [淘宝](https://s.taobao.com/search?q=架构之美)
-* 《分布式服务架构》[京东](https://union-click.jd.com/jdc?d=JS5Od9) [淘宝](https://s.taobao.com/search?q=分布式服务架构)
-* 《聊聊架构》 [京东](https://union-click.jd.com/jdc?d=FHooH4) [淘宝](https://s.taobao.com/search?q=聊聊架构)
-* 《云原生应用架构实践》[京东](https://union-click.jd.com/jdc?d=orkJSj) [淘宝](https://s.taobao.com/search?q=云原生应用架构实践)
-* 《亿级流量网站架构核心技术》[京东](https://union-click.jd.com/jdc?d=RnOSP5) [淘宝](https://s.taobao.com/search?q=亿级流量网站架构核心技术)
-* 《淘宝技术这十年》[京东](https://union-click.jd.com/jdc?d=LwrDfD) [淘宝](https://s.taobao.com/search?q=淘宝技术这十年)
-* 《企业IT架构转型之道-中台战略思想与架构实战》 [京东](https://union-click.jd.com/jdc?d=89pAEm) [淘宝](https://s.taobao.com/search?q=企业IT架构转型之道)
+* 《软件架构师的12项修炼：技术技能篇》[详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=rTlo0m)
+* 《架构之美》[详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=1KECBZ) 
+* 《分布式服务架构》[详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=hkzqtK) 
+* 《聊聊架构》 [详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=A8Nd6Z) 
+* 《云原生应用架构实践》[详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=D4WCpd) 
+* 《亿级流量网站架构核心技术》[详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=Rdmd21)
+* 《淘宝技术这十年》[详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=CoUdGG)
+* 《企业IT架构转型之道-中台战略思想与架构实战》 [详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=BxS6eI) 
 
-* 《高可用架构（第1卷）》[京东](https://item.jd.com/12195481.html) [淘宝](https://s.taobao.com/search?q=高可用架构)
+* 《高可用架构（第1卷）》[详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=BcjUwS) 
 
 #### 技术管理方面
-* 《CTO说》[京东](https://union-click.jd.com/jdc?d=zhTZyr) [淘宝](https://s.taobao.com/search?q=CTO说)
-* 《技术管理之巅》[京东](https://union-click.jd.com/jdc?d=LgRBUW) [淘宝](https://s.taobao.com/search?q=技术管理之巅)
-* 《网易一千零一夜：互联网产品项目管理实战》[京东](https://union-click.jd.com/jdc?d=jcRz2r) [淘宝](https://s.taobao.com/search?q=网易一千零一夜：互联网产品项目管理实战)
+* 《CTO说》[详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=Gl3QAo) 
+* 《技术管理之巅》[详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=MeloLt)
+* 《网易一千零一夜：互联网产品项目管理实战》[详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=qPuqMg) 
 
 #### 基础理论
-* 《数学之美》[京东](https://union-click.jd.com/jdc?d=ghIES2) [淘宝](https://s.taobao.com/search?q=数学之美)
-* 《编程珠玑》[京东](https://union-click.jd.com/jdc?d=YmhdEu) [淘宝](https://s.taobao.com/search?q=编程珠玑)
+* 《数学之美》[详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=0seUpO) 
+* 《编程珠玑》[详情](https://www.coderxing.com/r.php?r=https://union-click.jd.com/jdc?d=I7jj9r) 
 
 #### 工具方面
 TODO
@@ -2413,7 +2432,7 @@ TODO
 
 ## 综合云服务商
 * 阿里云
-* 腾讯云
+* [腾讯云](https://cloud.tencent.com/redirect.php?redirect=1012&cps_key=c2665015d90871c0cb20fef91b7afc3c)
 * 百度云
 * 新浪云
 * 金山云
@@ -2423,5 +2442,7 @@ TODO
 
 ### VPS
 * [Linode](http://linode.com)
+* [DigitalOcean](https://www.digitalocean.com)
+* [Vultr](https://www.vultr.com/)
 
 
